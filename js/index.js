@@ -1,5 +1,6 @@
 
-fetch('https://api.artic.edu/api/v1/artworks')
+document.getElementById('loadPlaces').addEventListener('click', () => {
+fetch('https://api.artic.edu/api/v1/places')
 .then(response => {
     if (!response.ok) {
         throw new Error(response.status);
@@ -7,23 +8,24 @@ fetch('https://api.artic.edu/api/v1/artworks')
     return response.json();
 })
 .then(data => {
-    const artworks = data.data;
-    console.log(artworks);
+    const places = data.data;
+    console.log(places);
 
-    const artSection = document.getElementById('artwork');
-    const artList = artSection.querySelector('ul');
+    const placeSection = document.getElementById('places');
+    const placeList = placeSection.querySelector('ul');
 
-    for (let i = 0; i < artworks.length; i++) {
-        const art = document.createElement('li');
-        art.innerText = artworks[i].title;
-        artList.appendChild(art);
+    for (let i = 0; i < places.length; i++) {
+        const place = document.createElement('li');
+        place.innerText = places[i].title;
+        placeList.appendChild(place);
     }
-}
-)
+})
 .catch(error => console.error(error));
+})
 
 
-fetch('https://api.artic.edu/api/v1/agents?limit=2')
+document.getElementById('loadAgents').addEventListener('click', () => {
+fetch('https://api.artic.edu/api/v1/agents')
 .then(response => {
     if (!response.ok) {
         throw new Error(response.status);
@@ -31,7 +33,7 @@ fetch('https://api.artic.edu/api/v1/agents?limit=2')
     return response.json();
 })
 .then(data => {
-    const agents = data;
+    const agents = data.data;
     console.log(agents);
 
     const agentSection = document.getElementById('agents');
@@ -42,6 +44,6 @@ fetch('https://api.artic.edu/api/v1/agents?limit=2')
         agent.innerText = agents[i].title;
         agentList.appendChild(agent);
     }
-}
-)
+})
 .catch(error => console.error(error));
+})

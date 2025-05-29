@@ -1,6 +1,9 @@
 body {
     background-color: bisque;
     font-family: trebuchet MS;
+    margin: 0;
+    border: ridge 15px burlywood;
+
 }
 
 head {
@@ -9,40 +12,73 @@ head {
 }
 
 
+img {
+    width: 36%;
+    max-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+button {
+    width: 40%;
+    display: block;
+    margin: 0.7em auto;
+    padding: 0.7em;
+    font-family: verdana;
+    font-weight: bold;
+    background-color: lightgreen;
+    color: green;
+    border: solid 2px green;
+}
+
+
 h1 {
     text-align: center;
     font-family: cambria;
     color: purple;
-    margin: 1.5em;
-
+    margin: 1em;
+    font-size: 2.2rem;
 }
 
 h2 {
     text-align: center;
     font-family: cambria;
     color: navy;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
+}
 
+
+h3 {
+    text-align: center;
+    color: gray;
+    font-size: 0.9rem;
+    margin: 0.8em 5em;
 }
 
 
 ul {
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
 
 
 li {
     color: maroon;
-    font-size: 0.6rem;
-
+    font-size: 1rem;
+    padding: 0.6em;
 }
 
 
-#artwork {
+#places {
     padding: 1em;
     margin: 2em;
-    border: 1px solid brown;
-    background-color: white;
+    border: 4px dotted rebeccapurple;
+    background-color: lavender;
 
 }
 
@@ -50,8 +86,39 @@ li {
 #agents {
     padding: 1em;
     margin: 2em;
-    border: 1px solid brown;
-    background-color: white;
+    border: 4px dotted navy;
+    background-color: skyblue;
+}
+
+
+.hide {
+    width: 25%;
+    display: block;
+    margin: 0.6em auto;
+    padding: 0.5em;
+    background-color: darksalmon;
+    color: maroon;
+    border: maroon 2px solid;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 500px) {
+    body {
+        background-color: pink;
+        border: ridge 11px maroon;
+
+    }
+
+}
+
+
+@media (min-width: 501px) and (max-width: 1000px) {
+    body {
+        background-color: powderblue;
+        border: ridge 10px brown;
+    }
 
 }
 
