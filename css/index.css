@@ -1,0 +1,57 @@
+body {
+    background-color: bisque;
+    font-family: trebuchet MS;
+}
+
+head {
+    margin-bottom: 1.5em;
+
+}
+
+
+h1 {
+    text-align: center;
+    font-family: cambria;
+    color: purple;
+    margin: 1.5em;
+
+}
+
+h2 {
+    text-align: center;
+    font-family: cambria;
+    color: navy;
+    font-size: 1.2rem;
+
+}
+
+
+ul {
+
+}
+
+
+li {
+    color: maroon;
+    font-size: 0.6rem;
+
+}
+
+
+#artwork {
+    padding: 1em;
+    margin: 2em;
+    border: 1px solid brown;
+    background-color: white;
+
+}
+
+
+#agents {
+    padding: 1em;
+    margin: 2em;
+    border: 1px solid brown;
+    background-color: white;
+
+}
+
